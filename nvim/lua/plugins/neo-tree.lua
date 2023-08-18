@@ -68,6 +68,7 @@ return {
       auto_clean_after_session_restore = true,
       close_if_last_window = true,
       source_selector = {
+        sources = {
         winbar = true,
         content_layout = "center",
         tab_labels = {
@@ -75,6 +76,7 @@ return {
           buffers = get_icon "DefaultFile" .. " Bufs",
           git_status = get_icon "Git" .. " Git",
           diagnostics = get_icon "Diagnostic" .. " Diagnostic",
+        },
         },
       },
       default_component_configs = {

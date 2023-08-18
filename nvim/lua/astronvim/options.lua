@@ -11,6 +11,7 @@ local options = astronvim.user_opts("options", {
     completeopt = { "menuone", "noselect" }, -- Options for insert mode completion
     copyindent = true, -- Copy the previous indentation on autoindenting
     cursorline = true, -- Highlight the text line of the cursor
+    cursorcolumn = true, -- Highlight the text line of the cursor
     expandtab = true, -- Enable the use of space in tab
     fileencoding = "utf-8", -- File content encoding for the buffer
     fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
@@ -28,7 +29,7 @@ local options = astronvim.user_opts("options", {
     preserveindent = true, -- Preserve indent structure as much as possible
     pumheight = 10, -- Height of the pop up menu
     relativenumber = true, -- Show relative numberline
-    scrolloff = 8, -- Number of lines to keep above and below the cursor
+    scrolloff = 16, -- Number of lines to keep above and below the cursor
     shiftwidth = 2, -- Number of space inserted for indentation
     showmode = false, -- Disable showing modes in command line
     showtabline = 2, -- always display tabline
