@@ -4,17 +4,31 @@ return {
   opts = function()
     local dashboard = require "alpha.themes.dashboard"
     dashboard.section.header.val = {
-      " █████  ███████ ████████ ██████   ██████",
-      "██   ██ ██         ██    ██   ██ ██    ██",
-      "███████ ███████    ██    ██████  ██    ██",
-      "██   ██      ██    ██    ██   ██ ██    ██",
-      "██   ██ ███████    ██    ██   ██  ██████",
+      " ██████  ██████ ██████ ██   ██ ██   ██ ",
+      " ██   ██   ██   ██     ██  ██  ██   ██ ",
+      " ██████    ██   ██     █████    ██████ ",
+      " ██   ██   ██   ██     ██  ██       ██ ",
+      " ██   ██ ██████ ██████ ██   ██ ██████  ",
       " ",
-      "    ███    ██ ██    ██ ██ ███    ███",
-      "    ████   ██ ██    ██ ██ ████  ████",
-      "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-      "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-      "    ██   ████   ████   ██ ██      ██",
+      "     ██  ██  ██ ██    ██ ████████     ",
+      "     ██  ██  ██ ██    ██       ██     ",
+      "     ██ ████ ██ ██    ██  ██████      ",
+      "      ███  ███  ██    ██ ██           ",
+      "       ██  ██    ██████  ████████     ",
+      " ",
+      "  ██   ██  ██████  ██████   ██████    ",
+      "   ██   ██  ██      ██   ██  ██       ",
+      "    ███████  ██████  ██████   ██████  ",
+      "     ██   ██  ██      ██   ██  ██     ",
+      "      ██   ██  ██████  ██   ██  ██████",
+      " ",
+      "               ██  ██████             ",
+      "             ██         ██            ",
+      "           ██       █████             ",
+      "             ██         ██            ",
+      "               ██  ██████             ",
+      "     ",
+      "   "
     }
     dashboard.section.header.opts.hl = "DashboardHeader"
 
@@ -29,7 +43,7 @@ return {
     }
 
     dashboard.section.footer.val =
-      { " ", " ", " ", "AstroNvim loaded " .. require("lazy").stats().count .. " plugins " }
+    { " ", " ", " ", "AstroNvim loaded " .. require("lazy").stats().count .. " plugins " }
     dashboard.section.footer.opts.hl = "DashboardFooter"
 
     dashboard.config.layout[1].val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) }

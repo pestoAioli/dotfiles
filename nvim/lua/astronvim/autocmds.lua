@@ -52,6 +52,13 @@ autocmd("BufDelete", {
   end,
 })
 
+autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
+})
+
 autocmd({ "VimEnter", "FileType", "BufEnter", "WinEnter" }, {
   desc = "URL Highlighting",
   group = augroup("highlighturl", { clear = true }),
@@ -113,7 +120,7 @@ autocmd("BufEnter", {
     local wins = vim.api.nvim_tabpage_list_wins(0)
     -- Both neo-tree and aerial will auto-quit if there is only a single window left
     if #wins <= 1 then return end
-    local sidebar_fts = { aerial = true,["neo-tree"] = true }
+    local sidebar_fts = { aerial = true, ["neo-tree"] = true }
     for _, winid in ipairs(wins) do
       if vim.api.nvim_win_is_valid(winid) then
         local bufnr = vim.api.nvim_win_get_buf(winid)
